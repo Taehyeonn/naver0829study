@@ -19,8 +19,8 @@ $ git config --global user.email johndoe@example.com
 4. git branch // branch 조회
 5. git add . 또는 git add 파일명 // 해당 파일들을 로컬 저장소에 추가
 6. git commit -m "메세지" // 해당 메세지와 함께 위의 파일들을 로컬저장소에 커밋
-7. git push origin master // 원격 저장소의 master 브랜치에 소스 보내기
-8. git pull origin 브랜치명 // 원격 저장소의 수정된 내용을 가져올 경우  
+7. git push origin 브랜치명(master) // 원격 저장소의 master 브랜치에 소스 보내기
+8. git pull origin 브랜치명 // 원격 저장소의 수정된 내용 가져오기 (깃헙 내용 변경시 필수. 안할시 PUSH 할때 오류)
  
 ls // 브랜치 내 파일 조회  
 cat 파일명.확장자 // 파일 열기  
