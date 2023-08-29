@@ -12,6 +12,7 @@ git-bash
 7. git commit -m "메세지" // 해당 메세지와 함께 위의 파일들을 로컬저장소에 커밋
 8. git push origin master // 원격 저장소의 master 브랜치에 소스 보내기
 9. git pull origin 브랜치명 // 원격 저장소의 수정된 내용을 가져올 경우
+10. 
 
 ls // 브랜치 내 파일 조회
 cat 파일명.확장자 // 파일 열기
