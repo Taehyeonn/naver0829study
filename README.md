@@ -1,7 +1,9 @@
 # naver0829study
 네이버 클라우드 과정 3기 수업
 
-
+jdk 설치 후 환경변수 설정  
+1. %JAVA_HOME%
+2. path
 
 
 git-bash
@@ -12,7 +14,7 @@ $ git config --global user.email johndoe@example.com
 
 1. git init // 연동할 폴더 초기화
 2. git remote add origin https://github.com/Taehyeonn/naver0829study.git // 연결
-3. 오류나서 새로운 깃 저장소와 연결ㅇ ㅣ안될 경우  
+3. 오류나서 새로운 깃 저장소와 연결이 안될 경우  
     git remote set-url origin https://github.com/Taehyeonn/naver0829study.git // 연결
 4. git branch // branch 조회
 5. git add . 또는 git add 파일명 // 해당 파일들을 로컬 저장소에 추가
@@ -36,7 +38,12 @@ java 파일명 // .class 실행
 git add . //  
 git commit -m "JAVA 첫 예제"  
 git push origin main // 깃헙에 올리기  
-* 오류시 git pull origin main
+(오류시 git pull origin main)  
+
+
+
+
+
 
 
 
