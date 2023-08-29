@@ -5,7 +5,7 @@ git-bash
 
 1. git init // 연동할 폴더 초기화
 2. git remote add origin https://github.com/Taehyeonn/naver0829study.git // 연결
-   오류나서 새로운 깃 저장소와 연결ㅇ ㅣ안될 경우
+3. 오류나서 새로운 깃 저장소와 연결ㅇ ㅣ안될 경우
     git remote set-url origin https://github.com/Taehyeonn/naver0829study.git // 연결
 5. git branch // branch 조회
 6. git add . 또는 git add 파일명 // 해당 파일들을 로컬 저장소에 추가
