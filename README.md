@@ -33,6 +33,16 @@ javac 파일명.java // .java를 .class로 컴파일
 java 파일명 // .class 실행  
 
 
+git add . //  
+git commit -m "JAVA 첫 예제"  
+git push origin main // 깃헙에 올리기  
+* 오류시 git pull origin main
+
+
+
+
+
+
 
 
 
