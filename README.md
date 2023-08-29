@@ -22,6 +22,5 @@ cat 파일명.확장자 // 파일 열기
 최초설정  
 
 $ git config --global user.name "John Doe"  
-
 $ git config --global user.email johndoe@example.com
 
