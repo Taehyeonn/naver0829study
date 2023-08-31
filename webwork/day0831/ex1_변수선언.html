@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제1</title>
+</head>
+<body>
+    <h2>body안에서 스크립트 실행하기</h2>
+    <img alt="자동차1" src="../car3.png" border="5" width="200"> 
+    <!-- 주석 - 소스 보기 하면 다 보임 -->
+    
+    <!-- 스크립트에서 글자와 이미지를 출력해보자 -->
+    <script>
+        //자바 스크립트 영역이라 주석 이렇게 가능
+        //브라우저로 html 태그 출력 : document.write로 출력
+        //브라우저 console창 출력 : console.log
+        document.write("<br><br><br><b>여기는 스크립트 영역입니다!</b><br><br>")
+    
+        var s1="../car3.png";
+        var s2="../car3.png";
+
+        //사진 출력 1
+        //자바스크립트에서는 작은또옴표와 큰따옴표의 의미가 같다
+        //따옴표 안에 따옴표를 넣을 경우 서로 교차되도록 넣어주면 된다
+        //문자열 내 공백 없으면 따옴표 안해도 됨(폴더명은 필수)
+        document.write("<img alt='사진1' src='"+s1+"' width=200>");//es5
+        document.write(`<img alt=사진2 src="${s2}" width>`);//es6, ${변수값}
+
+    </script>
+
+</body>
+</html>
