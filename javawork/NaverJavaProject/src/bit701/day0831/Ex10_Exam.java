@@ -1,5 +1,6 @@
-package bit701.day8031;
+package bit701.day0831;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Ex10_Exam {
@@ -19,6 +20,7 @@ public class Ex10_Exam {
 		 */
 		
 		Scanner sc = new Scanner(System.in);
+		NumberFormat numFormat=NumberFormat.getInstance(); //천원단위 콤마
 		System.out.println("상품명 입력");
 		String name = sc.nextLine();
 		System.out.println("수량 입력");
@@ -28,10 +30,10 @@ public class Ex10_Exam {
 		
 		
 		int sum = i*won;
-		System.out.println("총 금액 : "+sum);
+		System.out.println("총 금액 : "+numFormat.format(sum));
 		if(i>=5) {
 			int dc = sum/10;
-			System.out.println("5개 이상 10% 할인된 금액"+(sum-dc));
+			System.out.println("5개 이상 10% 할인된 금액"+numFormat.format(sum-dc));
 		}
 		
 		

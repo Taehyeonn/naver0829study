@@ -1,4 +1,4 @@
-package bit701.day8031;
+package bit701.day0831;
 
 import java.util.Scanner;
 
