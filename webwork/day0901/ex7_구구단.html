@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        start와 end값을 입력받아 해당 구구단을 출력하시오(가로방향)
+        단 start가 end보다 클 경우 두 값을 서로 바꾼 후 출력하시오
+     -->
+     <script>
+        let st=prompt("구구단 시작 단 입력(2~9)");
+        let en=prompt("구구단 종료 단 입력(2~9)");
+
+        if(st>en){
+            let temp = st;
+            st = en;
+            en = temp;
+        }
+
+        for(let i=st; i<=en; i++){
+            document.write(`&nbsp;&nbsp;${i}단&nbsp;&nbsp;&nbsp;&nbsp;`);
+        }
+        document.write(`<br>`);
+
+        for(let j=1; j<=9; j++){
+            for(let i=st; i<=en; i++){
+            document.write(`${i}x${j}=${i*j}&nbsp;`);
+            }
+            document.write(`<br>`);
+        }
+    </script>
+     
+</body>
+</html>
