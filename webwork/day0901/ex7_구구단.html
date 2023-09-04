@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h2{
+            color:blueviolet;
+
+        }
+        div.gugu{
+            float: left; /*태그를 우측방향으로 나열*/
+            width: 200px;
+            font-family: 'Impact';
+        }
+    </style>
 </head>
 <body>
     <!-- 
         start와 end값을 입력받아 해당 구구단을 출력하시오(가로방향)
         단 start가 end보다 클 경우 두 값을 서로 바꾼 후 출력하시오
      -->
-     <script>
+     <h2>구구단 출력하기(다중for문)연습</h2>
+     <!-- <script>
         let st=prompt("구구단 시작 단 입력(2~9)");
         let en=prompt("구구단 종료 단 입력(2~9)");
 
@@ -31,7 +43,26 @@
             }
             document.write(`<br>`);
         }
-    </script>
+    </script> -->
      
+     <script>
+        let st=Number(prompt("구구단 시작 단 입력(2~9)"));
+        let en=Number(prompt("구구단 종료 단 입력(2~9)"));
+
+        if(st>en){
+            let temp = st;
+            st = en;
+            en = temp;
+        }
+
+        let s = "";
+        for(let i=1; i<=9; i++){
+            for(let dan=st; dan<=en; dan++){
+                s+=`<div class="gugu">${dan}x${i}=${dan*i}&nbsp;&nbsp;&nbsp;</div>`;
+            }
+            s+="<br>";
+        }
+        document.write(s);
+    </script>
 </body>
 </html>

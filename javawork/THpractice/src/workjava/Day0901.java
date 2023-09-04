@@ -119,7 +119,7 @@ public class Day0901 {
 		while(true) {
 			
 			int com=rnd.nextInt(99)+1;
-			System.out.println("난수확인용 "+com);
+//			System.out.println("난수확인용 "+com);
 			
 			for(int i=1; i<=7; i++) {
 				

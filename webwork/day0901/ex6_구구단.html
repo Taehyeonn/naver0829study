@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h3.title{
+            color:blueviolet;
+            background-color: aquamarine;
+            width: 300px;
+            padding-left: 150px; /*태그 안쪽 여백*/
+        }
+        h4{
+            color:pink;
+            font-family: 'Franklin Gothic Medium';
+            margin-left: 100px; /*태그 바깥쪽 여백*/    
+        
+        }
+    </style>
 </head>
 <body>
     <!-- 
         1. 구구단 2~9 입력받아서 해당 구ㅜㄱ단을 출력하세요
         단 2~9 사이의 값이 아닐 경우 아무 이미지 반환
     -->
+    <h2>구구단 입력받아 출력하기</h2>
     <script>
-        let su=prompt("숫자 입력(2~9)");
+        let su=Number(prompt("숫자 입력(2~9)"));
+        console.log(typeof(su)); // 검사 - 콘솔창에서 su의 타입 확인 가능
         if(su<2 || su>9){
             document.write(`<img src="../연예인사진/hanyesel.jpg">`);
         } else{
-            document.write(`${su}단<br>`);
+            let s =su+"단<br>";
              for(let i=1; i<=9; i++){
       //      document.write(`반복문테스트=${i}<br>`); //&nbsp;
-            document.write(`${su}x${i}=${su*i}<br>`);
+      //      document.write(`${su}x${i}=${su*i}<br>`);
+            s+=`${su}x${i}=${su*i}<br>`; // s에 저장 후 한번에 출력
               }
+              document.write(s); //
         }
     </script>
 </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Ops+One&family=Dancing+Script&family=Nanum+Pen+Script&family=Rajdhani:wght@300&family=Stylish&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <style>
+        
+        div#msg{ /*class는# div는.*/ 
+            font-family: "Nanum Pen Script";
+            font-size: 30px;
+            margin-top: 30px;
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="txtmsg">
+    <input type="button" id="btn1" value="읽기">
+    
+    <!-- 이벤트 발생시 호출되는 function 만들기. -->
+    <!-- head의 window.onload에 해도디ㅗ고 body에 해도 됨.  -->
+    <div id="msg">Message 출력되는 곳</div>
+    <script>
+        let t=document.getElementById("txtmsg"); //요소 얻기
+        let b=document.getElementById("btn1");
+        let msg=document.getElementById("msg");
+
+        //버튼 이벤트-버튼 클릭시 해당 함수가 호출
+        b.onclick=function(){
+            //입력한 문자열 가져오기
+            let data=t.value;
+            //msg에 출력
+    //        msg.innerText="<u>"+data+"</u>" //tag없이 가져오는거면 TEXT, 아니면HTML
+     //       msg.innerHTML="<u>"+data+"</u>";
+            msg.innerHTML+="<br><u>"+data+"</u>"; // += 기존 데이터에 누적
+            
+            //입력한 값을 지운 후 포커스를 준다
+            t.value="";
+            t.focus();
+
+        }
+    </script> 
+</body>
+</html>

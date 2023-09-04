@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="새로운 난수 발생하기" id="btnrnd">
+    <script>
+        /*
+        난수값버튼
+        입력창 ok버튼
+        div(내용)
+        img(정답시 1~15car 이미지 랜덤)        
+        */
+
+
+        let rnd; // 난수를 구할 변수
+
+        //난수버튼 이벤트
+        document.getElementById("btnrnd").onclick=function(){
+            //1~100 난수 구하기
+            rnd=parseInt(Math.random()*100)+1;
+
+            //console에 출력
+            console.log(rnd);
+
+
+        }
+    </script> 
+    <input type="text" id="txtmsg">
+    <input type="button" id="btn1" value="입력">
+    <div id="msg">UP & Down</div>
+    <script>
+        let t=document.getElementById("txtmsg"); //요소 얻기
+        let b=document.getElementById("btn1");
+        let msg=document.getElementById("msg");
+        let c=document.getElementById("car1");
+
+        //버튼 이벤트-버튼 클릭시 해당 함수가 호출
+        b.onclick=function(){
+            //입력한 문자열 가져오기
+            let data=t.value;
+            let win=false;
+            
+            if(data==rnd){
+                msg.innerHTML+=`<br><u>정답입니다[${rnd}]</u>`;
+                win=true;
+            } else if(data>rnd){
+                msg.innerHTML+=`<br>${data}보다 작습니다`;
+            } else if(data<rnd){
+                msg.innerHTML+=`<br>${data}보다 큽니다`;
+            }else{
+            msg.innerHTML+="<br><u>연산오류</u>";
+            }
+
+            
+            //입력한 값을 지운 후 포커스를 준다
+            t.value="";
+            t.focus();
+
+            if(win==true){
+            let rndd = parseInt(Math.random()*15)+1;
+         //   document.write(`<img src="../mycar/car${rndd}.png">`);
+            let car1=document.getElementById("car1");
+            car1.setAttribute("src",`../mycar/car${rndd}.png`);
+
+            win = false;
+            }
+
+        }
+    </script>
+
+    <!-- <script> 
+        let rndd=parseInt(Math.random()*100)+1;
+        let p= <img src="../mycar/car${rndd}.png">
+        document.write(p);
+    </script> -->
+
+    <img id="car1" src="" width="300">
+
+</body>
+</html>
