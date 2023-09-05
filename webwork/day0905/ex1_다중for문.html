@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>숫자를 입력하면 그 숫자만큼 행, 열로 별표 출력하기</h3>
+
+    <input type="text" id="su1" size="3">
+    <input type="button" id="btnWir" value="입력">
+    <div style="margin-top: 20px; font-size: 25px;" id="result"></div>
+    <script>
+        document.getElementById("su1").onkeyup=function(e){ //e:이벤트
+            console.log(this.value); //this:자기 자신의 요소값 -방법1
+            console.log(e.target.value); //event가 발생되는 target(자기자신)이 입력한 value -방법2
+            console.log(e.keyCode); //키보드의 ASKII CODE 출력 엔터:13
+
+            // 숫자를 입력후 엔터를 누르면 그 숫자만큼 행, 열로 별표를 출력한다
+            if(e.keyCode==13){
+                //입력한 숫자
+                let su=Number(e.target.value);
+                let s="";
+                for(let i=1; i<=su; i++){
+                   for(let j=1; j<=su; j++){
+                    s+="★";
+                   }
+                   s+="<br>";
+                }
+                document.getElementById("result").innerHTML=s;    
+                
+                //입력한값 지우고 포커스주기
+                this.value="";
+                this.focus();
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

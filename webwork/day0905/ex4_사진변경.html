@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #photo{
+            margin-top: 10px;
+            border: 10px groove gold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3개의 버튼, 작게,크게,랜덤
+    -5px (50보다 클경우에만)
+    +5px (600보다 작을경우에만)
+    랜덤:1~20사이 난수를 구한 후 해당 사진으로 변경
+    -->
+    <div id="button">
+        <button type="button" id="btnplus">+</button>
+        <button type="button" id="btnminus">-</button>
+        <button type="button" id="btnrnd">랜덤</button>
+        <br>
+        현재사진너비<span id="fsize"></span>
+    </div>
+    <img src="../연예인사진2/1.jpg" style="width: 300px;" id="photo">
+    
+
+    <script>
+        document.getElementById("btnplus").onclick=function(){
+            
+            let m=document.getElementById("photo");
+            let ps=parseInt(m.style.width,10);
+            if(ps<600){
+            ps+=5;
+            m.style.width=ps+"px";
+            fsize.innerText=ps;
+            }
+
+        }
+
+        document.getElementById("btnminus").onclick=function(){
+            
+            let m=document.getElementById("photo");
+            let ps=parseInt(m.style.width,10);
+            if(ps>50){
+            ps-=5;
+            m.style.width=ps+"px";
+            }
+
+        }
+
+        document.getElementById("btnrnd").onclick=function(){
+            
+            let m=document.getElementById("photo");
+            let rnd=parseInt(Math.random()*20)+1;
+            m.setAttribute("src",`../연예인사진2/${rnd}.jpg`);
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
