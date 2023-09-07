@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.box{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 100px;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+        }
+
+        #button{
+            margin-left: 15%;
+            width: 300px;
+            height: 100px;
+            font-size: 20px;
+        }
+        #msg{
+            margin-left: 10%;
+            margin-top: 2%;
+            font-family: 'Impact';
+            font-size: 20px;
+            
+        }
+        #time{
+            margin-left: 15%;
+            
+        }
+
+
+    </style>
+    <script>
+        window.onload=function(){
+            //날짜 호출
+            init_time();
+
+            //1초마다 반복 호출
+            // setInterval(function(){
+            //     init_time();
+            // },1000);
+            
+            //랜덤함수 실행
+            rndNum();
+            
+        }
+
+        
+
+        function init_time(){
+         //   alert("호출?");
+         // 현재 날짜와 시간을 어어서 출력
+         let date=new Date();
+         let y=date.getFullYear();
+         let m=date.getMonth()+1;
+         let d=date.getDate();
+         
+         time.innerHTML=`${y}-${m}-${d}`;
+        }
+
+        function rndNum(){
+            //여러개의 class 요소들을 배열변수로 얻는다
+            let box=document.querySelectorAll("div.box"); //<<
+            console.log(box.length);
+
+            for(let i=0; i<box.length; i++){
+                box[i].innerHTML=parseInt(Math.random()*45)+1;
+                //중복처리
+                for(let j=0; j<i; j++){
+                        if(box[i]==box[j]){
+                            i--;
+                            break;
+                        }
+                }
+            }
+        }
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="msg">0회</div>
+    <!-- <h2>1000회</h2> -->
+    <div id="time">xxxx-xx-xx</div>
+    <div class="box" ></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div id="button">
+        <button type="button" id="btnrnd">로또 숫자 구하기</button>
+    </div>
+
+    <script>
+        let count = 0; //회
+        document.getElementById("btnrnd").onclick=function(){
+            rndNum();
+
+            msg.innerHTML=`${++count}회`;
+        }
+    </script>
+</body>
+</html>
