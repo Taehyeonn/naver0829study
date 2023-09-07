@@ -4,6 +4,7 @@ public class Ex1_array {
 
 	public static void main(String[] args) {
 		System.out.println("git test");
+		System.out.println("Dddd");
 	}
 		
 		
