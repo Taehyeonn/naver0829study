@@ -15,4 +15,8 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="bit701.day0908.Bitcamp"/>
+    <fullyQualifiedTypeName name="bit701.day0908.Ex4_Object"/>
+    <fullyQualifiedTypeName name="bit701.day0908.Ex5_SawonCall"/>
+    <fullyQualifiedTypeName name="bit701.day0908.Sawon"/>
 </qualifiedTypeNameHistroy>
