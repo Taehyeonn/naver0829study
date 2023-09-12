@@ -7,7 +7,7 @@ public class Account {
 	private int money;//잔액
 	
 	//3개의 값을 전달받는 생성자
-	Account(String accountNo,String accountName,int money){
+	public Account(String accountNo,String accountName,int money){
 		this.accountNo = accountNo;
 		this.accountName = accountName;
 		this.money = money;
@@ -38,4 +38,23 @@ public class Account {
 	System.out.println(accountNo+"\t"+accountName+"\t"+money);
 	}
 
+	public String getAccountNo() {
+		return accountNo;
+	}
+
+	public String getAccountName() {
+		return accountName;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+
+	
 }
+
+
