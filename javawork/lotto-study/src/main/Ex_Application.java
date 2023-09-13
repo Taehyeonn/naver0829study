@@ -84,6 +84,9 @@ public class Ex_Application {
 		System.out.println("로또번호 확인"+Arrays.toString(lottoTemp));
 		
 		
+		 //당첨확인
+		
+		
 		
 		
 		//출력
