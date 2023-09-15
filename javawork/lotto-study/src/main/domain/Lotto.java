@@ -10,30 +10,28 @@ import java.util.List;
 
 
 public class Lotto {
-	int[] lottoTemp = new int[6];
-	List<String> lotto1 = new ArrayList<String>();
+	
+	List<Integer> lotto1 = new ArrayList<Integer>();
 	private int temp;
 	
 	private int createRandomNumber() {
-//		int randomNumber = (int)(Math.random() * 45)+1;
-//		return lottoNumberDuplicate(randomNumber);
 		return (int)(Math.random() * 45)+1;
 	}
 
 	
 	private int lottoNumberDuplicate() {
 			temp = createRandomNumber();
-			if(lotto1.contains(temp) {
-				return createRandomNumber();
+			if(lotto1.contains(temp)) {
+				return lottoNumberDuplicate();
 			}
 		return temp;
-//		int temp = createRandomNumber();
-//		if(lotto1.contains(temp));
 	}
-	
+
 	public void addListNumber() {
 		lotto1.add(lottoNumberDuplicate());
+	System.out.println(lotto1.toString());
 	}
+	
 	
 	
 	

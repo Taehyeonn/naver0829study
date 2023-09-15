@@ -4,7 +4,7 @@ public class Money {
 	private int money;
 
 	Money(){
-		this(0);
+
 	}
 	
 	Money(int money){

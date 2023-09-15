@@ -22,7 +22,14 @@ public class Application {
 //		exception - 잘못된값입력시
 		
 		Lotto num = new Lotto();
-		System.out.println(num.createRandomNumber());
+		num.addListNumber();
+		num.addListNumber();
+		num.addListNumber();
+		num.addListNumber();
+		num.addListNumber();
+		num.addListNumber();
 		
+		
+//		
 }
 }
