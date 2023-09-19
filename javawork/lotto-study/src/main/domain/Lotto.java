@@ -18,7 +18,6 @@ public class Lotto {
 		return (int)(Math.random() * 45)+1;
 	}
 
-	
 	private int lottoNumberDuplicate() {
 			temp = createRandomNumber();
 			if(lotto1.contains(temp)) {

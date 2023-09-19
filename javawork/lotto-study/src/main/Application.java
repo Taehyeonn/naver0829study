@@ -21,14 +21,14 @@ public class Application {
 //
 //		exception - 잘못된값입력시
 		
-		Lotto num = new Lotto();
-		num.addListNumber();
-		num.addListNumber();
-		num.addListNumber();
-		num.addListNumber();
-		num.addListNumber();
-		num.addListNumber();
-		
+//		Lotto num = new Lotto();
+//		num.addListNumber();
+//		num.addListNumber();
+//		num.addListNumber();
+//		num.addListNumber();
+//		num.addListNumber();
+//		num.addListNumber();
+//		
 		
 //		
 }

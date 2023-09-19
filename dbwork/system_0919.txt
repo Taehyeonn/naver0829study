@@ -1,0 +1,27 @@
+-- system 계정에서 생성된 계정들 확인
+-- 한줄만 실행: ctrl + enter
+select username,account_status from dba_users;
+
+-- scott 계정을 잠금상태로 변경해보자
+alter user scott account lock; 
+
+-- scott 계정의 lock을 풀어보자
+alter user scott account unlock;
+
+-- angel 계정을 만들어보자(비번 a1234)
+create user angel IDENTIFIED by a1234;
+create user c##angel IDENTIFIED by a1234;
+
+-- 생성된 계정을 삭제하려면 
+drop user c##angel;
+
+-- c##을 안붙이고 계정을 생성하려면 세션을 변경한 후 생성해야 한다
+alter session set "_ORACLE_SCRIPT"=true;
+
+create user angel IDENTIFIED by a1234;
+
+-- 권한을 줘야만 접속과 데이터 저장이 가능하다
+grant connect, resource to angel;
+
+--테이블 생성권한주기
+alter user angel default tablespace users quota unlimited on users;
