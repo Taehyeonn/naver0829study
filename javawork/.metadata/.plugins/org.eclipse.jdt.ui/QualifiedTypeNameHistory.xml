@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="bit701.day0915.Ex3_Swingbutton"/>
-    <fullyQualifiedTypeName name="bit701.day0915.Ex4_SwingButton"/>
-    <fullyQualifiedTypeName name="bit701.day0915.Ex4_SwingButton.MyColorButton"/>
-    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.Action"/>
-    <fullyQualifiedTypeName name="bit701.day0915.Ex5_ArrayButton"/>
-    <fullyQualifiedTypeName name="bit701.day0915.Ex5_ArrayButton.MyButton"/>
     <fullyQualifiedTypeName name="bit701.day0915.Ex6_FileMemoFrame"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="bit701.day0915.Ex7_Canvas.MyCanvas"/>
     <fullyQualifiedTypeName name="bit701.day0915.SwingGibon"/>
     <fullyQualifiedTypeName name="java.awt.Image"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="bit701.day0919.Ex4_ClientChat"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="bit701.day0922.Ex1_OracleJdbc"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="bit701.day0922.Ex2_mysqlJdbc"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 </qualifiedTypeNameHistroy>
