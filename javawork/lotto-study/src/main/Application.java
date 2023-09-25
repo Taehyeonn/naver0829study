@@ -7,6 +7,8 @@ public class Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Lotto lotto = new Lotto();
+		lotto.addListNumber();
 		
 //		domain 
 //		lotto - 무작위 로또숫자, 중복처리, 로또숫자정렬

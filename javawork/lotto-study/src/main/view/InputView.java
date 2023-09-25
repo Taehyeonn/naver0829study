@@ -12,10 +12,12 @@ public class InputView {
 		System.out.println("구매할 금액을 입력하세요");
 		return sc.nextLine();
 	}
+
 	public String inputMessageWinNumber() {
 		System.out.println("당첨번호를 입력하세요");
 		return sc.nextLine();
 	}
+
 	public String inputMessageBonusNumer() {
 		System.out.println("보너스 번호를 입력하세요");
 		return sc.nextLine();

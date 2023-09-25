@@ -27,9 +27,19 @@ public class Lotto {
 	}
 
 	public void addListNumber() {
+		for(int i=lotto1.size(); i<6; i++) {
 		lotto1.add(lottoNumberDuplicate());
-	System.out.println(lotto1.toString());
+		}
+		
+
+
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	
