@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body * {
+		font-family: 'Jua';
+	}
+	table.two{
+		border: 5px groove orange;
+		border-collapse: collapse; /*collapse:칸과 칸사이 여백 제거*/
+									/*saparate:기본값*/
+	}
+	table.two td, table.two tr{
+		border: 1px solid green;
+	}
+</style>
+<script>
+	window.onload=function(){
+		
+	}
+</script>
+</head>
+<body>
+	<h2>각종 Table 만들기</h2>
+	<table border="1" style="width: 300px;">
+		<caption><b>[표1]</b></caption>
+		<tr height="50" bgcolor="orange" align="center"><!-- tr:한 줄을 의미 -->
+			<td>번호</td><!--한 칸을 의미-->
+			<td>이름</td>
+			<td>주소</td>		
+			<td rowspan="3">3줄합치기</td>
+		</tr>
+		<tr align="center"><!-- tr:한 줄을 의미 -->
+			<td bgcolor="pink">10</td><!--한 칸을 의미-->
+			<td>이영자</td>
+			<td align="right" bgcolor="#ccffaa">서초구</td>		
+		</tr>
+		<tr height="60", align="center" bgcolor="gray">
+			<td colspan="2">
+				가로 두칸합치기
+			</td>
+			<td bgcolor="#ffaacc"><h5>ㅎㅇ</h5></td>
+		</tr>
+		
+	</table>
+	<hr>
+	<table class="two">
+		<caption>[표2]</caption>
+		<tr>
+			<td rowspan="4" width="200px" align="center" bgcolor="black">
+				<img alt="사진" src="../image/13.jpg" width="100">
+			</td>
+			<td bgcolor="gold">이름:박신혜</td>
+		</tr>
+		<tr>
+			<td bgcolor="tomato">나이:30세</td>
+		</tr>
+		<tr>
+			<td bgcolor="blue">핸드폰:010-0000-0000</td>
+		</tr>
+		<tr>
+			<td bgcolor="green">주소:역삼동</td>
+		</tr>
+	</table>
+</body>
+</html>
