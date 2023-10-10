@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&family=Permanent+Marker&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<style>
+	body * {
+		font-family: 'Jua';
+	}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<div style="margin:30px 50px">
+	<h5 class="alert alert-danger">
+		글꼴 스타일을 선택하세요
+	</h5>
+	<label>
+		<input type="checkbox" class="style1">굵게
+	</label>
+	&nbsp;&nbsp;
+	<label>
+		<input type="checkbox" class="style2">기울게
+	</label>
+	&nbsp;&nbsp;
+	<label>
+		<input type="checkbox" class="style3">밑줄
+	</label>
+	&nbsp;&nbsp;
+	<label>
+		<input type="checkbox" class="style4">취소선
+	</label>
+	<br><br>
+	<h5 class="alert alert-danger">
+		글꼴을 선택하세요
+	</h5>
+	<label>
+		<input type="radio" name="fname" value="Jua" checked>Jua
+	</label>
+	&nbsp;&nbsp;
+	<label>
+		<input type="radio" name="fname" value="Gamja Flower">Gamja Flower
+	</label>
+	&nbsp;&nbsp;
+		<label>
+		<input type="radio" name="fname" value="Lobster">Lobster
+	</label>
+	&nbsp;&nbsp;
+		<label>
+		<input type="radio" name="fname" value="Nanum Pen Script">Nanum Pen Script
+	</label>
+	&nbsp;&nbsp;	
+	<h5 class="alert alert-danger">
+		글꼴 크기를 선택하세요
+	</h5>
+	<select class="form-select" style="width:130px">
+		<script>
+			for(let i=10; i<=60; i++){
+				document.write(`<option ${i==25?"selected":""}>${i}px</option>`);
+			}
+		</script>
+	</select>
+
+</div>
+<script>
+	$(".style1").change(function(){
+		if($(this).is(":checked")){
+ 			 $(".msg").css("font-weight", "bold");
+  		}else{
+  			$(".msg").css("font-weight", "normal");
+  		}
+	});	
+	$(".style2").change(function(){
+		if($(this).is(":checked")){
+ 			 $(".msg").css("font-style", "oblique");
+  		}else{
+  			$(".msg").css("font-style", "normal");
+  		}
+	});	
+	$(".style3").change(function(){
+		if($(this).is(":checked")){
+ 			 $(".msg").css("text-decoration", "underline");
+  		}else{
+  			$(".msg").css("text-decoration", "none");
+  		}
+	});	
+	
+	$(".style4").change(function(){
+		if($(this).is(":checked")){
+ 			 $(".msg").css("text-decoration", "line-through");
+  		}else{
+  			$(".msg").css("text-decoration", "none");
+  		}
+	});	
+	
+	$("input[name='fname']").change(function(){
+		let ff = $(this).val();
+		$(".msg").css("font-family",ff);
+	});	
+	
+	$(".form-select").change(function(){
+		let fs = $(this).val();
+		$(".msg").css("font-size",fs);
+	});
+	
+</script>
+
+
+<div class="msg" style="font-size: 25px; margin: 30px 50px; border: 10px inset gold; width: 400px;">111</div>
+</body>
+</html>
