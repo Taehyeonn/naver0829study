@@ -17,29 +17,29 @@
 </script>
 </head>
 <body>
-	<div class="input-group" style="width:150px">
-		<span class="input-group-text">이름</span>
+	<div class="input-group" style="width:200px">
+		<span class="input-group-text">이름</span>&nbsp;&nbsp;
 		<input type="text" class="form-control" id="name">
 	</div>
 	<div class="input-group" style="width:180px">
-		<span class="input-group-text">성별</span>
+		<span class="input-group-text">성별</span>&nbsp;&nbsp;
 		
-		<label><input type="radio" class="gen" value="남자" name="g">남자</label>
-		<label><input type="radio" class="gen" value="여자" name="g">여자</label>
+		<label><input type="radio" value="남자" name="gen" checked>남자</label>&nbsp;&nbsp;
+		<label><input type="radio" value="여자" name="gen">여자</label>&nbsp;&nbsp;
 
 	</div>
-	<div class="input-group" style="width:180px; height: 100px;">
-		<span class="input-group-text">자격증</span>
-		<label><input type="checkbox" class="j" value="자동차운전면허">자동차운전면허</label>
-		<label><input type="checkbox" class="j" value="정보처리기사">정보처리기사</label>
+	<div class="input-group" style="width:400px;">
+		<span class="input-group-text">자격증</span>&nbsp;&nbsp;
+		<label><input type="checkbox" class="j" value="자동차운전면허">자동차운전면허</label>&nbsp;&nbsp;
+		<label><input type="checkbox" class="j" value="정보처리기사">정보처리기사</label>&nbsp;&nbsp;
 	</div>
 	<div>
-	<div class="input-group" style="width:180px">
-		<span class="input-group-text">글자색</span>	
-		<label><input type="radio" class="fcolor" value="yellow" name="fc">노랑</label>
-		<label><input type="radio" class="fcolor" value="black" name="fc">검정</label>
-		<label><input type="radio" class="fcolor" value="red" name="fc">빨강</label>
-		<label><input type="radio" class="fcolor" value="blue" name="fc">파랑</label>
+	<div class="input-group" style="width:400px">
+		<span class="input-group-text">글자색</span>	&nbsp;&nbsp;
+		<label><input type="radio" class="fcolor" value="yellow" name="fc">노랑</label>&nbsp;&nbsp;
+		<label><input type="radio" class="fcolor" value="black" name="fc">검정</label>&nbsp;&nbsp;
+		<label><input type="radio" class="fcolor" value="red" name="fc">빨강</label>&nbsp;&nbsp;
+		<label><input type="radio" class="fcolor" value="blue" name="fc">파랑</label>&nbsp;&nbsp;
 	</div>
 	<script>
 
@@ -53,7 +53,7 @@
 		
 		$(".btn").on("click", function(){
 			let s = "이름:"+$("#name").val()+"<br>";
-			s+="성별:"+$(".gen").val()+"<br>";
+			s+="성별:"+$("input[name='gen']:checked").val()+"<br>";
 			s+="자격증:";
 			
 			if($(".j:checked").length==0){
@@ -64,15 +64,20 @@
 				});
 			}
 			s+="<br>";
-			$(".result").html(s);
+			
+			s+="색상:"+$(".fcolor:checked").val();
+			
+			$(".result").html(s).css("color",$(".fcolor:checked").val());
+			
+			
 
-		
+		/*
 		$(".fcolor").click(function(){
 			let fc=$(this).val();
 			$(".result").css("color",fc);
 		});
 		
-		
+		*/
 			
 		});
 	</script>

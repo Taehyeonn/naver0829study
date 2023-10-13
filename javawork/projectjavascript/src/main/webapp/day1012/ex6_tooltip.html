@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&family=Permanent+Marker&family=Single+Day&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<style>
+	body * {
+		font-family: 'Jua';
+	}
+	
+	.mytooltip{
+		position: absolute;
+		line-height: 1.5;
+		color: black;
+		width: 200px;
+		background-color: #f90;
+		border: 2px solid white;
+		padding: 10px;
+		font-size: 14px;
+		border-radius: 30px;
+		opacity: 0.8;
+		display: none;
+	}
+	
+	.view{
+		cursor: pointer;
+		text-decoration: underline;
+		background-color: #ccc;
+	}
+	
+	ol.today li{
+		cursor: pointer;
+		background-color: #ccc;
+	}
+	
+	ol.today li:hover{
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+</style>
+<script>
+	$(function(){
+		$("a").bind({
+			mousemove:function(e){
+				$("div.mytooltip").css({
+					"left":e.pageX+"px",
+					"top":e.pageY+"px"
+				});
+			},
+			mouseover:function(){
+				$("div.mytooltip").fadeIn('fast');
+			},
+			mouseout:function(){
+				$("div.mytooltip").fadeOut('fast');
+			}
+		});
+		
+		$(".view").bind({
+			mousemove:function(e){
+				$("div.mytooltip").css({
+					"left":e.pageX+"px",
+					"top":e.pageY+"px"
+				});
+			},
+			mouseover:function(){
+				let color=$(this).attr("color");
+		//		let text=$(this).text();
+				let text=$(this).attr("content");
+				$("div.mytooltip").css("color", color).html(text);
+				$("div.mytooltip").fadeIn('fast');
+			},
+			mouseout:function(){
+				$("div.mytooltip").fadeOut('fast');
+			}
+		});
+		
+		
+		$("ol.today li").bind({
+			mousemove:function(e){
+				$("div.mytooltip").css({
+					"left":e.pageX+"px",
+					"top":e.pageY+"px"
+				});
+			},
+			mouseover:function(){
+				let photo=$(this).attr("photo");
+				let text=$(this).text();
+				$("div.mytooltip").html(`<b>${text}<br><img src="${photo}" border=2 width=100>`);
+				$("div.mytooltip").fadeIn('fast');
+			},
+			mouseout:function(){
+				$("div.mytooltip").fadeOut('fast');
+			}
+		});
+		
+		
+	});
+
+</script>
+</head>
+<body>
+<h4 class="alert alert-danger">Tooltip 링크에 마우스를 올려보세요</h4>
+<br><br>
+<a style="font-size: 25px; cursor: pointer;">
+	Tooltip Tooltip Tooltip Tooltip 	
+</a>
+
+<pre>
+	
+9월 가계대출 2.4조↑…‘대출 제한’으로 증가폭 축소
+	
+<b class="view" color="green" content="zzzzz">특례보금자리론</b> 공급 중단과 50년 만기 주담대 축소 등 대출 제한 영향으로 9월 중 가계대출의 증가폭이 줄어든 것으로 나타났습니다.
+
+금융위원회가 오늘(12일) 발표한 9월 중 가계대출 동향을 보면 전금융권 가계대출은 한 달 전보다 2조 4,000억 원 증가했습니다.
+
+대출항목별로 보면 주택담보대출의 경우 제2금융권에서 4,000억 원이 줄었지만, 은행권에서 6조 1,000억 원이 늘면서 총 5조 7,000억 원이 증가했습니다.
+
+은행권 <b class="view" color="magenta"  content="설명">주택담보대출은</b> 집단 대출(+0.3조 원)과 전세 대출(+0.1조 원)의 증가폭이 소폭 확대됐지만, 일반 개별주담대(+3.6조원)·정책모기지(+2.1조 원)는 증가폭이 축소됐습니다.
+
+기타대출은 추석 상여금 유입 등으로 한도대출 등이 줄어들면서 은행권(-1.3조 원)과 제2금융권(-2.1조 원) 모두 감소해 총 3조 3,000억 원 감소했습니다.
+
+업권 별로 보면 은행권 가계대출 잔액은 지난달 말 기준 1079조 8,000억 원 수준으로, 한 달 전보다 4조 9,000억 원 늘어 전월(+6.9조 원) 대비 증가폭이 크게 줄었습니다.
+
+제2금융권 가계대출은 총 2조 5,000억 원 줄어들어 전월(-0.8조 원) 대비 감소폭이 확대됐습니다.
+
+금융당국은 가계대출 규모가 여전히 높고, 10월에는 가을철 <b class="view" color="blue"  content="ㅁㄴㅇㅁㄴㅇ">이사수요</b>, 신용대출 감소에 따른 기저효과 등으로 다시 증가폭이 늘어날 수 있다고 지적했습니다.
+
+그러면서 가계대출 추이를 지속 모니터링하는 한편, 가계대출이 실수요자 위주로 공급될 수 있도록 안정적으로 관리해나갈 계획이라고 밝혔습니다.
+
+</pre>
+<hr>
+<h2>오늘 나의 식사 및 쇼핑 목록</h2>
+<ol type="1" class="today">
+	<li photo="../food/1.jpg">에그샌드위치</li>
+	<li photo="../food/11.jpg">망고빙수</li>
+	<li photo="../shop/8.jpg">회색스웨터</li>
+	<li photo="../shop/29.jpg">여름용 모자</li>
+	
+	
+	
+</ol>
+<div class="mytooltip">
+	java<br>
+	html5<br>
+	springboot<br>
+	jQuery
+</div>
+
+</body>
+</html>
