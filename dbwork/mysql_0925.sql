@@ -16,3 +16,9 @@ create table student (
     constraint stu_pk_num primary key(num),
     constraint stu_ck_blood check (blood in('A','B','O',"AB"))
 );
+
+insert into student values(null, '이름', 'A', '01077067706',now());
+
+delete from student where right(phone, 4)='7706';
+
+insert into student values (null, ?, ?, ?, now())
