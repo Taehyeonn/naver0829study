@@ -125,16 +125,41 @@ public class MyShopDao {
 				dto.setColor(rs.getString("color"));
 				dto.setWriteday(rs.getTimestamp("writeday"));
 
-
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			db.dbClose(rs, pstmt, conn);
 		}
-
 		return dto;
 	}
+	
+	
+	//update
+		public void updateShop(MyShopDto dto) {
+
+			String sql="update myshop set sangpum=?, color=?, price=?, photo=?, where num=?";
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt=null;
+
+			try {
+				pstmt = conn.prepareStatement(sql);
+
+				//바인딩
+				pstmt.setString(1, dto.getSangpum());
+				pstmt.setString(2, dto.getColor());
+				pstmt.setInt(3, dto.getPrice());
+				pstmt.setString(4, dto.getPhoto());
+				pstmt.setInt(5, dto.getNum());
+				
+				//실행
+				pstmt.execute();
+			} catch (SQLException e) { 
+				System.out.println("insert sql문 오류"+e.getMessage());
+			} finally {
+				db.dbClose(pstmt, conn);
+			}
+		}
 
 
 

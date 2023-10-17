@@ -34,7 +34,7 @@
 	
 %>
 <body>
-<form action="./myshopupdatejsp" method="post">
+<form action="./myshopupdate.jsp" method="post">
 	<table class="table table-bordered" style="width:300px; margin:30px 100px;">
 		<caption align="top"><b>상품 수정</b></caption>	
 		<tr>
